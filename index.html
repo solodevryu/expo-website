@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll of Doom - Official Site</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#top" class="logo">
+            <img src="gametitle.png" alt="Scroll of Doom Logo" class="logo-img">
+        </a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#lore">Lore</a>
+            <a href="#download" class="nav-btn">Play Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="top" class="hero">
+        <div class="hero-content">
+            <h1 class="glow-text text-pixel">SCROLL OF DOOM</h1>
+            <p class="subtitle">“Follow the glowing scroll.”</p>
+
+            <a href="#download" class="btn btn-primary">
+                Play Now
+            </a>
+        </div>
+
+        <!-- Mascot -->
+        <div class="mascot-container">
+            <svg class="cat-mascot" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="100" cy="100" r="70"
+                        fill="url(#auraGrad)"
+                        opacity="0.6"
+                        class="aura-pulse"/>
+
+                <defs>
+                    <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#F0ABFC" stop-opacity="1"/>
+                        <stop offset="50%" stop-color="#A855F7" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="#090611" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+
+                <!-- Tail -->
+                <path d="M 60 140 Q 30 110 40 80 Q 45 70 55 80"
+                      fill="none"
+                      stroke="#1D1033"
+                      stroke-width="12"
+                      stroke-linecap="round"/>
+
+                <path d="M 60 140 Q 30 110 40 80 Q 45 70 55 80"
+                      fill="none"
+                      stroke="#A855F7"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      opacity="0.8"/>
+
+                <!-- Ears -->
+                <polygon points="60,70 50,30 80,50"
+                         fill="#1D1033"
+                         stroke="#A855F7"
+                         stroke-width="3"/>
+
+                <polygon points="140,70 150,30 120,50"
+                         fill="#1D1033"
+                         stroke="#A855F7"
+                         stroke-width="3"/>
+
+                <!-- Head -->
+                <circle cx="100" cy="100" r="45"
+                        fill="#1D1033"
+                        stroke="#A855F7"
+                        stroke-width="4"/>
+
+                <!-- Eyes -->
+                <g class="eyes">
+                    <path d="M 75 95 Q 80 90 85 95 Q 85 100 80 105 Q 73 100 80 95"
+                          fill="none"
+                          stroke="#F0ABFC"
+                          stroke-width="3"
+                          class="spiral-eye"/>
+
+                    <path d="M 115 95 Q 120 90 125 95 Q 125 100 120 105 Q 113 100 120 95"
+                          fill="none"
+                          stroke="#F0ABFC"
+                          stroke-width="3"
+                          class="spiral-eye"/>
+                </g>
+
+                <!-- Blush -->
+                <circle cx="70" cy="108" r="5"
+                        fill="#F0ABFC"
+                        opacity="0.6"/>
+
+                <circle cx="130" cy="108" r="5"
+                        fill="#F0ABFC"
+                        opacity="0.6"/>
+
+                <!-- Phone -->
+                <g class="glowing-phone">
+                    <rect x="90" y="115" width="20" height="35"
+                          rx="4"
+                          fill="#1D1033"
+                          stroke="#D8B4FE"
+                          stroke-width="2"/>
+
+                    <rect x="93" y="118" width="14" height="24"
+                          rx="2"
+                          fill="#F0ABFC"
+                          opacity="0.9"
+                          class="screen-glow"/>
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about section-reveal">
+        <div class="container">
+
+            <h2 class="text-pixel section-title">
+                About the Game
+            </h2>
+
+            <div class="about-card">
+                <div class="pixel-icon">🔮</div>
+
+                <p>
+                    Scroll of Doom is a fantasy-inspired pixel adventure
+                    where a magical cat guides players through a glowing
+                    world of endless scrolling, choices, and mysterious discoveries.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+
+            <h2 class="text-pixel section-title">
+                Game Features
+            </h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card section-reveal">
+                    <div class="feat-icon">📖</div>
+                    <h3>Interactive Story</h3>
+                    <p>Your choices needs to be right.</p>
+                </div>
+
+                <div class="feature-card section-reveal">
+                    <div class="feat-icon">✨</div>
+                    <h3>Complete Game</h3>
+                    <p>Will you escape the scroll or become its permanent keeper?</p>
+                </div>
+
+                <div class="feature-card section-reveal">
+                    <div class="feat-icon">👾</div>
+                    <h3>Pixel World</h3>
+                    <p>Lovingly crafted neon environments dripping with atmosphere.</p>
+                </div>
+
+                <div class="feature-card section-reveal">
+                    <div class="feat-icon">❓</div>
+                    <h3>Quiz Adventure</h3>
+                    <p>Test your wits against mysterious puzzles.</p>
+                </div>
+
+                <div class="feature-card section-reveal">
+                    <div class="feat-icon">🌙</div>
+                    <h3>Cozy Fantasy Vibe</h3>
+                    <p>No jumpscares here. Just deep, comforting digital mysteries.</p>
+                </div>
+
+                <div class="feature-card section-reveal">
+                    <div class="feat-icon">🎵</div>
+                    <h3>Relaxing Soundtrack</h3>
+                    <p>Hypnotic lo-fi chiptunes that soothe your wandering soul.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+
+            <h2 class="text-pixel section-title">
+                World Gallery
+            </h2>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item section-reveal"
+                     onclick="openLightbox('map1.jpg', 'Triggers')">
+
+                    <img src="map1.jpg"
+                         alt="Triggers"
+                         class="gallery-img">
+                </div>
+
+                <div class="gallery-item section-reveal"
+                     onclick="openLightbox('map2.png', 'Consequences')">
+
+                    <img src="map2.png"
+                         alt="Consequences"
+                         class="gallery-img">
+                </div>
+
+                <div class="gallery-item section-reveal"
+                     onclick="openLightbox('map3.jpg', 'Coping')">
+
+                    <img src="map3.jpg"
+                         alt="Coping"
+                         class="gallery-img">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+
+        <span class="close-lightbox">&times;</span>
+
+        <div class="lightbox-content">
+
+            <img id="lightbox-image"
+                 class="lightbox-image"
+                 src=""
+                 alt="">
+
+            <p id="lightbox-caption"></p>
+
+        </div>
+    </div>
+
+    <!-- Lore -->
+    <section id="lore" class="lore section-reveal">
+
+        <div class="lore-bg-decorations">
+            <span class="rune">✨</span>
+            <span class="rune">🔮</span>
+            <span class="rune">🌟</span>
+        </div>
+
+        <div class="container compact">
+
+            <h2 class="text-pixel section-title">
+                The Legend
+            </h2>
+
+            <blockquote class="lore-box">
+                “A tiny spirit cat appeared from the glow of a forgotten screen…
+                guiding lost souls through the endless scroll.”
+            </blockquote>
+
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="download section-reveal">
+
+        <div class="container">
+
+            <h2 class="text-pixel">
+                Join the Scroll of Doom World
+            </h2>
+
+            <p style="margin-bottom: 2rem;">
+                Download Now!
+            </p>
+
+            <!-- APK DOWNLOAD BUTTON -->
+            <a href="ScrollOfDoom.apk"
+               download
+               class="btn btn-large btn-glow">
+
+                Download APK
+
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="pixel-divider"></div>
+
+        <div class="footer-content">
+            <p>
+                &copy; 2026 Scroll of Doom.
+                All Rights Reserved.
+                Made with digital cat magic.
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
